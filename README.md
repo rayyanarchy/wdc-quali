@@ -1,34 +1,39 @@
 # F1 WDC Contenders
 
-A web application that displays Formula 1 drivers who are still mathematically in contention for the World Drivers' Championship (WDC). The app calculates each driver's maximum possible points for the remaining season and determines if they can still catch the current championship leader.
+A Formula 1 web app that determines which drivers are still mathematically in contention for the World Drivers' Championship. The project uses current championship standings and the maximum points available in the remaining races to identify drivers who can still catch the championship leader.
+
+> This project is not affiliated with, endorsed by, or associated with Formula 1, the FIA, or any Formula 1 teams.
 
 ## How It Works
 
-The application calculates whether each driver can still win the championship by:
-1. Fetching the current driver standings for the season
-2. Determining the maximum points available in remaining races (accounting for sprint vs conventional formats)
-3. Adding each driver's current points to the maximum possible points
-4. Comparing this total against the current leader's points to determine if they're still in contention
+For each driver, the app:
 
-## Technologies Used
+1. Fetches the current F1 driver standings.
+2. Determines the remaining races and their available points, including Sprint weekends.
+3. Calculates each driver's maximum possible season total.
+4. Compares that total with the current championship leader.
+5. Marks each driver as either **IN FIGHT** or **OUT**.
 
-- **Flask**: Web framework for Python
-- **FastF1**: Python library for accessing F1 data
-- **Pandas**: Data manipulation and analysis
-- **Ergast API**: Formula 1 data API (accessed via FastF1)
+The current version uses a deterministic mathematical calculation. A **Jev-based probability model** is planned to estimate each driver's probability of becoming the eventual WDC.
 
-## Credits & Acknowledgments
 
-This project uses the following services and resources:
+## Tech Stack
 
-- **[FastF1](https://github.com/theOehrly/Fast-F1)**: Python library for accessing Formula 1 data
-- **[Ergast API](http://ergast.com/mrd/)**: Formula 1 historical data API
-- **[Flask](https://flask.palletsprojects.com/)**: Web framework
-- **F1 Fonts**: Official Formula 1 typography (F1 Regular, F1 Torque, F1 Turbo)
+* **Python**
+* **Flask** — web application
+* **FastF1** — F1 data and event schedules
+* **Pandas** — data processing
+* **Jev** — planned probabilistic modelling
 
-All Formula 1 data is provided by the Ergast API, which offers free access to historical F1 data. The FastF1 library provides a convenient Python interface to this data.
 
-## Disclaimer
+## Roadmap
 
-This application is not affiliated with, endorsed by, or associated with Formula 1, the FIA, or any Formula 1 teams. All F1 data is sourced from publicly available APIs.
+* [ ] Add Jev-based WDC probability model
+* [ ] Improve the web UI
+* [ ] Investigate support for historical seasons
+* [ ] Evaluate migration from Render to Vercel for improved deployment performance
 
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
