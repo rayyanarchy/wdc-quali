@@ -4,6 +4,8 @@ A Formula 1 web app that determines which drivers are still mathematically in co
 
 > This project is not affiliated with, endorsed by, or associated with Formula 1, the FIA, or any Formula 1 teams.
 
+![Webpage Preview](static/wdc-quali-preview.png)
+
 ## How It Works
 
 For each driver, the app:
@@ -16,22 +18,23 @@ For each driver, the app:
 
 The current version uses a deterministic mathematical calculation. A **Jev-based probability model** is planned to estimate each driver's probability of becoming the eventual WDC.
 
-
 ## Tech Stack
 
-* **Python**
-* **Flask** — web application
-* **FastF1** — F1 data and event schedules
-* **Pandas** — data processing
-* **Jev** — planned probabilistic modelling
+- **Python**
+- **Flask** — web application
+- **FastF1** — F1 data and event schedules
+- **Pandas** — data processing
+- **Jev** — planned probabilistic modelling
+
 
 
 ## Roadmap
 
-* [ ] Add Jev-based WDC probability model
-* [ ] Improve the web UI
-* [ ] Investigate support for historical seasons
-* [ ] Evaluate migration from Render to Vercel for improved deployment performance
+- [ ] Add Jev-based WDC probability model
+- [ ] Improve the web UI
+- [ ] Investigate support for historical seasons
+- [ ] Evaluate migration from Render to Vercel for improved deployment performance
+
 
 
 ## License
